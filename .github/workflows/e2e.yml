@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18]
+        node-version: [22]
 
     env:
       LOGIN_URL: ${{ secrets.LOGIN_URL }}
@@ -46,7 +46,7 @@ jobs:
       #  Run all specs in one Cypress process in given order
       - name: Run Cypress E2E Tests Sequentially
         run: |
-          npx cypress run --browser chrome --headless --spec "cypress/e2e/Facility-Network/fn-full-flow.cy.js"
+            npx cypress run --browser chrome --headless --spec "cypress/e2e/**/*.cy.js" --exclude "cypress/e2e/Facility-Network/fn-full-flow.cy.js"
 
       #  Merge mochawesome JSON into single file
       - name: Merge Mochawesome JSON
