@@ -16,9 +16,11 @@ jobs:
         node-version: [18]
 
     env:
-      CYPRESS_baseUrl: ${{ secrets.CYPRESS_BASEURL }}
-      CYPRESS_testUserEmail: ${{ secrets.CYPRESS_TESTUSEREMAIL }}
-      CYPRESS_testUserPassword: ${{ secrets.CYPRESS_TESTUSERPASSWORD }}
+      LOGIN_URL: ${{ secrets.LOGIN_URL }}
+      FN_EMAIL: ${{ secrets.FN_EMAIL }}
+      FN_PASSWORD: ${{ secrets.FN_PASSWORD }}
+      GMAIL_USER: ${{ secrets.GMAIL_USER }}
+      GMAIL_PASS: ${{ secrets.GMAIL_PASS }}
       CI: true
       CYPRESS_VIDEO: true
       CYPRESS_VIDEO_COMPRESSION: 20
